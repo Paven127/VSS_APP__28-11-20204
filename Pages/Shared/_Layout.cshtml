@@ -14,8 +14,9 @@
     <link href="~/assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap Css -->
-    <link href="~/themeassets/css/app.css" rel="stylesheet" />
+    <a href="~/themeassets/css/app.min.css.map">~/themeassets/css/app.min.css.map</a>
     <link href="~/themeassets/css/app.min.css" rel="stylesheet" />
+    <link href="~/themeassets/css/app.css" rel="stylesheet" />
     <a href="~/themeassets/css/app.min.css.map">~/themeassets/css/app.min.css.map</a>
     <!-- Icons Css -->
     <link rel="stylesheet" href="~/themeassets/" asp-append-version="true" />
@@ -27,10 +28,16 @@
     <!-- Custome CSS Layout -->
     <link rel="stylesheet" href="~/VSS.styles.css" asp-append-version="true" />
 
+    <style>
+        li {
+            margin-top: 15px;
+        }
+    </style>
+
 </head>
 
 
-<body>
+<body data-layout="horizontal">
 
     <!-- <body data-layout="horizontal"> -->
     <!-- Begin page -->
@@ -65,11 +72,17 @@
                         <i class="fa fa-fw fa-bars"></i>
                     </button>
 
+                    <li class="metismenu list-unstyled" id="side-menu" >
+                        <partial name="_LoginPartial" />
+                    </li>
+
                     <div class="dropdown d-none d-lg-block ms-2">
                         <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                             <span>Components</span>
                             <i class="mdi mdi-chevron-down"></i>
                         </button>
+
+
                         <div class="dropdown-menu dropdown-menu-xl p-2">
                             <div class="row">
                                 <div class="col-md-6">
@@ -147,6 +160,9 @@
                             </div>
                         </div>
                     </div>
+
+
+
                 </div>
 
                 <div class="d-flex">
@@ -419,46 +435,7 @@
                 </div>
             </div>
         </header>
-        <!-- ========== Left Sidebar Start ========== -->
-        <div class="vertical-menu">
 
-            <!-- LOGO -->
-            <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="assets/images/logo-sm.png" alt="" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="assets/images/logo-dark.png" alt="" height="22">
-                    </span>
-                </a>
-
-                <a href="index.html" class="logo logo-light">
-                    <span class="logo-lg">
-                        <img src="assets/images/logo-light.png" alt="" height="22">
-                    </span>
-                    <span class="logo-sm">
-                        <img src="assets/images/logo-sm-light.png" alt="" height="22">
-                    </span>
-                </a>
-            </div>
-
-            <button type="button" class="btn btn-sm px-3 font-size-16 header-item vertical-menu-btn">
-                <i class="fa fa-fw fa-bars"></i>
-            </button>
-
-            <div data-simplebar class="sidebar-menu-scroll">
-
-                <!--- Sidemenu -->
-                <div id="sidebar-menu">
-                    <!-- Left Menu Start -->
-                    <ul class="metismenu list-unstyled" id="side-menu">
-                        <partial name="_LoginPartial" />
-                    </ul>
-                </div>
-                <!-- Sidebar -->
-            </div>
-        </div>
         <!-- Left Sidebar End -->
         <!-- ============================================================== -->
         <!-- Start right Content here -->
@@ -497,10 +474,23 @@
     </div>
     <!-- END layout-wrapper -->
     <!-- JAVASCRIPT -->
+
+    <link href="~/themeassets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/themeassets/libs/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/themeassets/libs/bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet" />
+
+
     <script src="~/themeassets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/themeassets/libs/metismenu/metismenu.min.js"></script>
     <script src="~/themeassets/libs/metismenujs/metismenujs.min.js"></script>
+
     <script src="~/themeassets/libs/simplebar/simplebar.min.js"></script>
+
+
     <script src="~/themeassets/libs/feather-icons/feather.min.js"></script>
+
+
 
     <!-- apexcharts -->
     <script src="~/themeassets/libs/apexcharts/apexcharts.min.js"></script>
@@ -512,7 +502,6 @@
     <script src="~/themeassets/js/pages/dashboard-sales.init.js"></script>
 
     <script src="~/themeassets/js/app.js"></script>
-
     <!-- .Net Core Layout Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
